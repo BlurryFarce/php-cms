@@ -9,12 +9,12 @@ secure();
 if( isset( $_GET['delete'] ) )
 {
   
-  $query = 'DELETE FROM projects
+  $query = 'DELETE FROM pets
     WHERE id = '.$_GET['delete'].'
     LIMIT 1';
   mysqli_query( $connect, $query );
     
-  set_message( 'Project has been deleted' );
+  set_message( 'Pet has been deleted' );
   
   header( 'Location: projects.php' );
   die();
@@ -24,13 +24,13 @@ if( isset( $_GET['delete'] ) )
 include( 'includes/header.php' );
 
 $query = 'SELECT *
-  FROM projects
-  ORDER BY date DESC';
+  FROM pets
+  ORDER BY id DESC';
 $result = mysqli_query( $connect, $query );
 
 ?>
 
-<h2>Manage Projects</h2>
+<h2>Manage Pets</h2>
 
 <table>
   <tr>

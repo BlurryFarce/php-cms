@@ -4,7 +4,7 @@ $connect = mysqli_connect(
     "localhost", // Host
     "root", // Username
     "root", // Password
-    "phpcms" // Database
+    "pet_adoption_portal" // Database
 );
 
 mysqli_set_charset( $connect, 'UTF8' );
