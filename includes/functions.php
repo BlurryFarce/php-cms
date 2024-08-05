@@ -21,19 +21,6 @@ function pre( $data )
   
 }
 
-function secure()
-{
-  
-  if( !isset( $_SESSION['id'] ) )
-  {
-    
-    header( 'Location: /' );
-    die();
-    
-  }
-  
-}
-
 function set_message( $message )
 {
   
